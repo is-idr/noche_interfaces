@@ -1,0 +1,226 @@
+/* Fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Fuente Source Sans 3 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    /* Fuentes */
+    --font-main: "Montserrat", sans-serif;
+    --font-secondary: "Source Sans 3", sans-serif;
+
+    --font-size-title: 48px;
+    --font-size-subtitle: 32px;
+    --font-size-content: 24px;
+    --font-size-annotation: 16px;
+
+    /* Colores */
+    --color-black: #000000;
+    --color-grey: #3B4B5B;
+    --color-blue: #0097B2;
+    --color-teal: #38B48A;
+    --color-green: #7ED957;
+    --color-dark-red: #FF5757;
+    --color-light-red: #FF9898;
+    --color-lavender: #DAE4FF;
+    --color-light-blue: #E5F7FF;
+    --color-white: #FFFFFF;
+
+    --color-dark-primary: #3B585B;
+    --color-dark-secondary: #2D3E42;
+
+    /* Tamaños de pantalla */
+    --screen-size-phone: 600px;
+    --screen-size-tablet: 768px;
+    --screen-size-desktop: 992px;
+    --screen-size-large: 1200px;
+
+    /* Tamaños de elementos */
+    --header-height: 50px;
+    --footer-height: 150px;
+
+    /* Otros */
+    --shadow-default: 0 0 10px rgba(0, 0, 0, 0.35);
+
+    /* Degradados: Horizontal y vertical */
+    --gradient: linear-gradient(to right, var(--color-blue), var(--color-green));
+    --gradient-vertical: linear-gradient(to bottom, var(--color-blue), var(--color-green));
+    --gradient-inverted: linear-gradient(to left, var(--color-blue), var(--color-green));
+    --gradient-vertical-inverted: linear-gradient(to top, var(--color-blue), var(--color-green));
+
+    /* Ajustes del fondo */
+    --background-opacity: 50%;
+    --background-gradient: linear-gradient(to right,
+    color-mix(in oklab, var(--color-blue), white calc(100% - var(--background-opacity))),
+    color-mix(in oklab, var(--color-green), white calc(100% - var(--background-opacity))));
+}
+
+/* ----------------- General --------------------- */
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    font-size: var(--font-size-content);
+}
+
+body.gradient {
+    background: var(--background-gradient);
+}
+
+.gradient {
+    background: var(--gradient);
+}
+
+header {
+    height: var(--header-height);
+}
+main {
+    position: relative;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+footer {
+    position: relative;
+    width: 100%;
+    height: var(--footer-height);
+}
+
+/* ------------------ Cartas –---------------------- */
+.card {
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-default);
+}
+
+.compound-card {
+    --border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    box-shadow: var(--shadow-default);
+    border-radius: var(--border-radius);
+
+    .compound-card-top {
+        background-color: var(--color-white);
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    .compound-card-bottom {
+        background-color: var(--color-white);
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+}
+
+.center-content {
+    position: relative;
+
+    & > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* ------------- Botones --------------  */
+:not(.button-group):has(> .button) {
+    display: flex;
+    flex-direction: row;
+
+    .button {
+        width: 100%;
+        user-select: none;
+        font-family: var(--font-main);
+        font-size: var(--font-size-annotation);
+        padding: 15px 50px;
+        border-radius: 50px;
+        border: none;
+        font-weight: bold;
+        transition: cubic-bezier(0,.8,.39,1) 0.25s;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.button-gradient {
+    background: linear-gradient(to right, var(--color-blue), var(--color-green), var(--color-blue));
+    background-size: 200%;
+    color: var(--color-white);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        background-position-x: -100%;
+    }
+}
+
+.button-light {
+    background: var(--color-white);
+
+    &:hover {
+        background-color: var(--color-light-blue);
+    }
+}
+
+.button-dark {
+    background: var(--color-grey);
+    color: var(--color-white);
+
+    &:hover {
+        background-color: var(--color-black);
+    }
+}
+
+.button-red {
+    background: var(--color-dark-red);
+    color: var(--color-white);
+
+    &:hover {
+        background-color: var(--color-light-red);
+    }
+}
+.button-dark {
+    background: var(--color-grey);
+    color: var(--color-white);
+
+    &:hover {
+        background-color: var(--color-black);
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .button {
+        width: 100%;
+        text-align: center;
+        user-select: none;
+        font-family: var(--font-main);
+        font-size: var(--font-size-annotation);
+        padding: 15px 0px;
+        border-radius: 0px;
+        border: none;
+        margin: 0px;
+        font-weight: bold;
+        transition: cubic-bezier(0,.8,.39,1) 0.25s;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    :first-child {
+        border-radius: 50px 0 0 50px;
+    }
+
+    :last-child {
+        border-radius: 0 50px 50px 0;
+    }
+}
