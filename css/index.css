@@ -1,0 +1,41 @@
+section.ads-container {
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    transform: translateY(25px);
+    flex-direction: row;
+    box-shadow: var(--shadow-default);
+    border-radius: 15px;
+    user-select: none;
+
+    .ad-container {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        height: 75px;
+        background-color: var(--color-white);
+
+        &:first-child {
+            border-radius: 15px 0 0 15px;
+        }
+
+        &:nth-child(even) {
+            background-color: aliceblue;
+        }
+
+        &:last-child {
+            border-radius: 0 15px 15px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section.ads-container .ad-container {
+        &:nth-last-child(2) {
+            border-radius: 0 15px 15px 0;
+        }
+        &:last-child {
+            display: none;
+        }
+    }
+}
