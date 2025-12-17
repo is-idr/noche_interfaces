@@ -229,7 +229,9 @@ footer {
 html, body {
     height: 100%;
 }
+
 header {
+    user-select: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -237,6 +239,7 @@ header {
         position: relative;
         
         .header-logo {
+            z-index: 1;
             height: calc(var(--header-height) - 10px);
             position: absolute;
             top: 50%;
@@ -244,6 +247,11 @@ header {
             transform: translate(-50%, -50%);
             transition: ease-out 0.05s;
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+
+            img {
+                width: inherit;
+                height: inherit;
+            }
 
             &:hover {
                 transform: translate(-50%, -50%) scale(103%);
@@ -373,6 +381,7 @@ header {
                     text-decoration: none;
                     position: relative;
                     background-color: white;
+                    opacity: 75%;
 
                     svg {
                         position: absolute;
@@ -396,6 +405,7 @@ header {
 
                     &:hover {
                         filter: brightness(95%);
+                        opacity: 100%;
                     }
                 }
 
@@ -497,6 +507,29 @@ footer {
         &:hover {
             transition: ease-out 0.05s;
             cursor: pointer;
+        }
+    }
+}
+
+/* Dropdowns */
+
+.dropdown {
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-default);
+
+    .dropdown-arrow {
+        user-select: none;
+        position: absolute;
+        right: 5px;
+        aspect-ratio: 1;
+        opacity: 50%;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 100%;
         }
     }
 }

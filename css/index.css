@@ -95,8 +95,10 @@ main {
                     position: relative;
 
                     .weight {
+                        position: absolute;
                         font-size: var(--font-size-annotation);
                         color: var(--color-grey);
+                        bottom: 15px;
                     }
 
                     .price {

@@ -1,0 +1,67 @@
+main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    .profile-info {
+        .profile-info-container {
+            width: calc(100% - 10px);
+            height: calc(100% - 20px);
+            margin: 10px;
+            border-radius: 15px;
+            display: grid;
+            grid-template-rows: 93% auto;
+
+            .user-info {
+                font-size: var(--font-size-annotation);
+                color: #b6b6b6;
+            }
+
+            .log-out {
+                user-select: none;
+                background-color: var(--color-light-red);
+                color: var(--color-black);
+                text-decoration: none;
+
+                .log-out-content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    .icon {
+                        position: relative;
+                        width: 30px;
+                        height: min-content;
+                        color: var(--color-dark-red);
+                        margin-right: 10px;
+                    }
+
+                    span {
+                        position: relative;
+                    }
+                }
+
+                &:hover {
+                    transition: ease-out 0.1s;
+                    background-color: var(--color-dark-red);
+
+                    .log-out-content .icon {
+                        transform: scale(102%);
+                        filter: brightness(75%);
+                    }
+                }
+            }
+        }
+    }
+
+    #dropdown-container {
+        padding: 10px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: calc(100vh - var(--header-height) - var(--footer-height));
+
+        .dropdown:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}
