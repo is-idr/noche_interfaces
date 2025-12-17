@@ -114,7 +114,7 @@ main {
         padding: 10px;
         overflow-x: hidden;
         overflow-y: scroll;
-        height: calc(100vh - var(--header-height) - var(--footer-height));
+        height: calc(100vh - var(--header-height) - var(--footer-height) + 10px);
 
         .dropdown:not(:first-child) {
             margin-top: 10px;
