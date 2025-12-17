@@ -227,7 +227,7 @@ footer {
 
 /* Header & Footer */
 html, body {
-    height: 100vh;
+    height: 100%;
 }
 header {
     display: grid;
@@ -328,19 +328,43 @@ header {
             }
 
             .content {
-                position: absolute;
+                position: fixed;
                 background-color: white;
                 font-size: var(--font-size-annotation);
                 right: 0;
                 top: 0;
-                z-index: 1;
+                z-index: 2;
                 transform: translateX(100%);
                 width: 200px;
-                height: calc(100% - var(--header-height) - var(--footer-height));
-                margin-top: var(--header-height);
+                height: 100%;
                 display: flex;
                 flex-direction: column;
-                box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15); 
+                box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15);
+
+                .close-header-hamburger {
+                    display: flex;
+                    justify-content: right;
+                    color: var(--color-black);
+                    height: var(--header-height);
+
+                    #close-hamburger-button {
+                        height: var(--header-height);
+                        width: var(--header-height);
+                        
+                        svg {
+                            opacity: 50%;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &:hover svg {
+                            cursor: pointer;
+                            transition: ease-out 0.05s;
+                            transform: scale(102%);
+                            opacity: 100%;
+                        }
+                    }
+                }
 
                 a {
                     width: 100%;
@@ -381,6 +405,18 @@ header {
                     margin-top: 0;
                     margin-bottom: 0;
                 }
+            }
+
+            #content-background {
+                position: fixed;
+                z-index: 1;
+                background-color: black;
+                opacity: 50%;
+                width: 100vw;
+                height: 100vh;
+                left: 0;
+                margin: 0;
+                overflow: hidden;
             }
         }
     }
@@ -423,6 +459,44 @@ footer {
                 transform: translate(-50%, -50%) scale(103%);
                 cursor: pointer;
             }
+        }
+    }
+}
+
+/* Buscador */
+
+.custom-searchbar-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 500px;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-default);
+    border: rgba(0, 0, 0, 0.25) 1px solid;
+    display: flex;
+    flex-direction: row;
+    
+    .custom-searchbar {
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 5px;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    svg {
+        height: 100%;
+        width: max-content;
+        aspect-ratio: 1;
+        margin: auto 10px;
+
+        &:hover {
+            transition: ease-out 0.05s;
+            cursor: pointer;
         }
     }
 }
