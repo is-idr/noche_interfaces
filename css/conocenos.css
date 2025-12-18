@@ -1,0 +1,74 @@
+* {
+    /*border: red 1px solid;*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+    background-image: url("../imagenes/fondo_paisaje.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.logo img {
+    width: 15vw;
+    max-width: 200px;
+    min-width: 120px;
+    height: auto;
+}
+
+/*main h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 3rem;
+}*/
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image-left, .image-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.image-left {
+    flex-direction: row;
+}
+
+.image-left .dev-personal-info {
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.image-right {
+    flex-direction: row-reverse;
+}
+
+.image-right .dev-personal-info {
+    text-align: right;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.knowus-image img {
+    width: 125px;
+    height: auto;
+}
