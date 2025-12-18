@@ -1,12 +1,12 @@
 main {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% auto;
 
     .profile-info {
         .profile-info-container {
-            width: calc(100% - 10px);
-            height: calc(100% - 20px);
-            margin: 10px;
+            width: calc(100% - 30px);
+            height: calc(100% - 40px);
+            margin: 20px;
             border-radius: 15px;
             display: grid;
             grid-template-rows: 93% auto;
@@ -15,7 +15,7 @@ main {
                 position: relative;
 
                 .user-info-container {
-                    margin: 50px;
+                    margin: 40px;
                     display: flex;
                     flex-direction: column;
 
@@ -114,28 +114,71 @@ main {
         padding: 10px;
         overflow-x: hidden;
         overflow-y: scroll;
-        height: calc(100vh - var(--header-height) - var(--footer-height) + 10px);
-
-        .dropdown:not(:first-child) {
-            margin-top: 10px;
-        }
+        margin-top: 10px;
+        height: calc(100vh - var(--header-height) - var(--footer-height));
 
         .dropdown {
-            font-size: var(--font-size-annotation);
+            font-size: var(--font-size-content);
+            background-color: var(--color-light-blue);
 
             .dropdown-title {
-                font-weight: bold;
-                margin-left: 15px;
+                position: relative;
+                background-color: var(--color-white);
+                width: 100%;
+                height: 50px;
+
+                .icon {
+                    width: 30px;
+                    aspect-ratio: 1;
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                }
+
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 45px;
+                    transform: translateY(-50%);
+                }
             }
 
             .dropdown-content {
-                margin: 15px;
+                width: auto;
+                height: 100%;
+                padding: 10px 20px;
+
+                .preferences {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    justify-content: center;
+
+                    .preference {
+                        margin: 5px;
+
+                        input {
+                            width: 20px;
+                            aspect-ratio: 1;
+                            accent-color: var(--color-blue);
+                            box-shadow: 0 0 0 1px var(--color-blue);
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:not(:first-child) {
+                margin-top: 10px;
             }
         }
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     main {
         display: flex;
         flex-direction: column;

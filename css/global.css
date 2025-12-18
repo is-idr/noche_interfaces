@@ -523,9 +523,11 @@ footer {
     .dropdown-arrow {
         user-select: none;
         position: absolute;
-        right: 5px;
+        right: 10px;
+        top: 5px;
         aspect-ratio: 1;
         opacity: 50%;
+        z-index: 1;
 
         &:hover {
             cursor: pointer;
