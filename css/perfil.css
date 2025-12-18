@@ -117,7 +117,7 @@ main {
         overflow-y: scroll;
         margin-top: 10px;
         height: calc(100vh - var(--header-height) - var(--footer-height));
-
+        
         .dropdown {
             font-size: var(--font-size-content);
             background-color: var(--color-light-blue);
@@ -235,14 +235,11 @@ main {
                         margin: 0;
                     }
 
-                    .next-bill {
-                        font-size: var(--font-size-annotation);
-                    }
+                    
 
                     .date, .time {
                         color: var(--color-white);
                         background-color: var(--color-grey);
-                        font-size: var(--font-size-annotation);
                         font-weight: bold;
                         padding: 2px 10px;
                         border-radius: 4px;

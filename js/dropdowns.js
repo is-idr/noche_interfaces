@@ -120,9 +120,9 @@ class Dropdown {
         this.expanded = true;
         this.element.style.userSelect = "auto";
         this.element.style.cursor = "auto";
-        dropdowns.forEach(dropdown => {
+        /*dropdowns.forEach(dropdown => {
             if(dropdown !== this) dropdown.close();
-        });
+        });*/
 
         this.openAnimation();
 
@@ -170,8 +170,8 @@ class Dropdown {
 
     openAnimation() {
         this.animateElement([
-            { height: this.collapsedHeight },
-            { height: this.expandedHeight }
+            { minHeight: this.collapsedHeight },
+            { minHeight: this.expandedHeight }
         ]);
 
         this.animateArrow([
@@ -182,8 +182,8 @@ class Dropdown {
 
     closeAnimation() {
         this.animateElement([
-            { height: this.expandedHeight },
-            { height: this.collapsedHeight }
+            { minHeight: this.expandedHeight },
+            { minHeight: this.collapsedHeight }
         ]);
 
         this.animateArrow([
