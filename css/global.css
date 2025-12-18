@@ -81,6 +81,15 @@ footer {
     width: 100%;
     height: var(--footer-height);
 }
+.animate-gradient {
+    background: linear-gradient(to right, var(--color-blue), var(--color-green), var(--color-blue));
+    background-size: 200%;
+    animation: gradient-animation linear 15s infinite;
+}
+@keyframes gradient-animation {
+    0% { background-position-x: 0%; }
+    100% { background-position-x: 1000%; }
+}
 
 /* ------------------ Cartas –---------------------- */
 .card {
@@ -151,8 +160,13 @@ footer {
     color: var(--color-white);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 
-    &:hover {
+    &:not(.animate-gradient):hover {
         background-position-x: -100%;
+    }
+
+    &.animate-gradient:hover {
+        transition: ease-out 0.1s;
+        filter: brightness(80%);
     }
 }
 
@@ -179,14 +193,6 @@ footer {
 
     &:hover {
         background-color: var(--color-light-red);
-    }
-}
-.button-dark {
-    background: var(--color-grey);
-    color: var(--color-white);
-
-    &:hover {
-        background-color: var(--color-black);
     }
 }
 
