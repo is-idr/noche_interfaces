@@ -38,6 +38,7 @@ main {
 
         * {
             font-family: var(--font-main);
+            font-size: var(--font-size-content);
         }
 
         .custom-searchbar-container {
@@ -78,6 +79,7 @@ main {
                     width: 150px;
 
                     img {
+                        user-select: none;
                         width: 150px;
                         aspect-ratio: 1;
                         border-radius: inherit;
