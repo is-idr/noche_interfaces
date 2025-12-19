@@ -1,0 +1,21 @@
+main {
+  min-height: 100vh;
+  background-image: url('../imagenes/fondo_paisaje.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end; /* coloca la card a la derecha */
+  align-items: center;       /* centra verticalmente */
+  padding: 40px;             /* espacio respecto a los márgenes */
+}
+
+.card-form {
+  width: 45%;        /* ocupa casi la mitad */
+  max-width: 600px;  /* límite en pantallas grandes */
+}
+
+h2 {
+  text-align: center;
+}
