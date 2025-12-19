@@ -2,7 +2,8 @@ main {
     height: calc(100vh - var(--header-height) - var(--footer-height));
     
     .card {
-        width: 450px;
+        max-width: 450px;
+        width: 70vw;
         text-align: center;
         padding: 20px 35px;
 

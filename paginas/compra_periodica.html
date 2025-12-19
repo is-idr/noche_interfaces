@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/compra_periodica.css">
     <script src="../js/headerAndFooter.js"></script>
     <script src="../js/dragAndDrop.js"></script>
+    <script src="../js/calendar.js"></script>
+    <script src="../js/numberInput.js"></script>
+    <script src="../js/dropdowns.js"></script>
     <script src="../js/compra_periodica.js"></script>
     <title>Compras Periódicas - Noche</title>
 </head>
@@ -170,25 +173,31 @@
                     </div>
                     <div class="products drag-container">
                         <div class="product drag-element">
-                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false"
+                                alt="Buscar">
                             <div class="product-info drag-element-body">
                                 <span class="name">Producto 1</span>
                             </div>
-                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false"
+                                alt="Buscar">
                         </div>
                         <div class="product drag-element">
-                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false"
+                                alt="Buscar">
                             <div class="product-info drag-element-body">
                                 <span class="name">Producto 2</span>
                             </div>
-                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false"
+                                alt="Buscar">
                         </div>
                         <div class="product drag-element">
-                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false"
+                                alt="Buscar">
                             <div class="product-info drag-element-body">
                                 <span class="name">Producto 3</span>
                             </div>
-                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false"
+                                alt="Buscar">
                         </div>
                     </div>
                 </div>
@@ -214,25 +223,64 @@
                     </div>
                     <div class="products drag-container">
                         <div class="product drag-element">
-                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false"
+                                alt="Buscar">
                             <div class="product-info drag-element-body">
                                 <span class="name">Producto 4</span>
                             </div>
-                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false"
+                                alt="Buscar">
                         </div>
                         <div class="product drag-element">
-                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false"
+                                alt="Buscar">
                             <div class="product-info drag-element-body">
                                 <span class="name">Producto 5</span>
                             </div>
-                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false" alt="Buscar">
+                            <img src="../SVG/trashcan.svg" class="delete" width="30" height="30" draggable="false"
+                                alt="Buscar">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="right">
+            <div class="purchase-container">
+                <h1>Finalizar compra</h1>
+                <div id="custom-calendar">
+                    <div class="calendar-content">
+                        <span>Enviar cada</span>
+                        <input type="custom-number" id="periodicity" min="1" max="365" />
+                        <span id="periodicity-days-text">días</span>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="button button-dark">Pausar</button>
+                    <button class="button button-red">Cancelar</button>
+                </div>
+                <div id="dropdown-container" arrow-path="../SVG/arrow_down.svg">
+                    <div class="dropdown" arrow-size="40px" width="100%" height="110px" collapsed-height="55px">
+                        <div class="dropdown-title">
+                            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14.5 9.08333L14.3563 8.96356C13.9968 8.66403 13.5438 8.5 13.0759 8.5H10.75C9.7835 8.5 9 9.2835 9 10.25V10.25C9 11.2165 9.7835 12 10.75 12H13.25C14.2165 12 15 12.7835 15 13.75V13.75C15 14.7165 14.2165 15.5 13.25 15.5H10.412C9.8913 15.5 9.39114 15.2969 9.01782 14.934L9 14.9167"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8L12 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 17V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Método de pago</span>
+                        </div>
+                        <div class="dropdown-content">
 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="gradient">
