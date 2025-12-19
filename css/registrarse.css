@@ -27,6 +27,7 @@ main {
             line-height: 25px;
 
             img.logo {
+                user-select: none;
                 min-width: 250px;
                 width: 20vw;
                 height: auto;
@@ -95,6 +96,11 @@ main {
 
             font-size: 0.95rem;
             box-sizing: border-box;
+
+            &::placeholder {
+                user-select: none;
+                font-family: var(--font-secondary);
+            }
         }
 
         button[type="submit"] {
