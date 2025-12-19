@@ -1,7 +1,64 @@
 main {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 500px auto;
     height: calc(100vh - var(--header-height) - var(--footer-height));
+
+    .popup {
+        min-width: max-content;
+        width: 400px;
+        min-height: max-content;
+        text-align: center;
+
+        .popup-content {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: var(--font-size-subtitle);
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                div {
+                    margin: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        text-align: left;
+                        font-size: var(--font-size-annotation);
+                    }
+
+                    input {
+                        border: none;
+                        background-color: var(--color-light-blue);
+                        height: 10px;
+                        padding: 15px;
+                        border-radius: 5px;
+                        font-size: var(--font-size-content);
+                        margin-top: 5px;
+
+                        &:focus {
+                            background-color: var(--color-lavender);
+                            outline: none;
+                        }
+                    }
+                }
+
+                .button-container {
+                    margin: 20px 0;
+                    width: 100%;
+                    
+                    button {
+                        margin: auto;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
 
     .profile-info {
         .profile-info-container {
@@ -70,6 +127,12 @@ main {
                             background-color: var(--color-lavender);
                             border-radius: 10px;
                             font-size: var(--font-size-content);
+
+                            &:hover {
+                                transition: ease-out 0.1s;
+                                filter: brightness(90%);
+                                cursor: text;
+                            }
                         }
                     }
                 }
@@ -118,11 +181,11 @@ main {
         overflow-y: scroll;
         margin-top: 10px;
         height: calc(100vh - var(--header-height) - var(--footer-height));
-        
+
         .dropdown {
             font-size: var(--font-size-content);
             background-color: var(--color-light-blue);
-            
+
 
             img {
                 user-select: none;
@@ -180,7 +243,7 @@ main {
                 }
 
                 &:not(.preferences) {
-                    
+
                     .dropdown-preview {
                         margin-top: 5px;
                         display: flex;
@@ -199,7 +262,7 @@ main {
 
                     .dropdown-info {
                         margin-top: 25px;
-                        
+
                         .button-group {
                             width: 100%;
                             height: 30px;
@@ -211,7 +274,7 @@ main {
                     &:not(.address-info) {
                         user-select: none;
                     }
-                    
+
                     .address-info {
                         background-color: var(--color-grey);
                         color: var(--color-white);
@@ -245,9 +308,10 @@ main {
                         margin: 0;
                     }
 
-                    
 
-                    .date, .time {
+
+                    .date,
+                    .time {
                         color: var(--color-white);
                         background-color: var(--color-grey);
                         font-weight: bold;
@@ -282,7 +346,7 @@ main {
 
         #dropdown-container {
             height: max-content;
-            margin: 20px;
+            margin: 30px;
             margin-top: 0;
         }
     }

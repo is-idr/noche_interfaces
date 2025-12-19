@@ -32,6 +32,7 @@ let popupBackground, popupBackgroundOpacity;
 
 window.addEventListener("DOMContentLoaded", () => {
     const popupElements = document.querySelectorAll(POPUP_SELECTORS["POPUP"]);
+    console.log(popupElements);
     const popupTriggers = document.querySelectorAll(POPUP_SELECTORS["POPUP_TRIGGER"]);
     const closeImagePath = getCloseImagePath();
 
