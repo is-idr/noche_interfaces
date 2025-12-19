@@ -584,3 +584,43 @@ footer {
         }
     }
 }
+/* Drag and drop */
+
+#drag-and-drop {
+    user-select: none;
+
+    .dragged-element {
+        position: absolute;
+        cursor: grab;
+    }
+
+    .dragged-element-placeholder {
+        filter: brightness(0%) opacity(25%) invert(15%);
+    }
+
+    .drag-container {
+        position: relative;
+        background-color: white;
+        border: white 3px solid;
+    }
+
+    .container-on-drag {
+        border: rgb(198, 211, 217) 3px dashed;
+
+        .drag-element {
+            opacity: 100%;
+        }
+    }
+
+    .drag-element {
+        background-color: white;
+    }
+
+    .drag-element-body {
+        height: inherit;
+
+        &:hover {
+            cursor: grab;
+        }
+    }
+}
