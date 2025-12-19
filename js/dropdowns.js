@@ -57,7 +57,7 @@ function createElement(name, attributes={}) {
 class Dropdown {
     constructor(element, arrowPath) {
         this.element = element;
-        this.expanded = false;
+        this.expanded = true;
         this.initialize(arrowPath);
     }
 
@@ -67,7 +67,7 @@ class Dropdown {
         this.expandedHeight = this.getAttr(DROPDOWN_ATTRIBUTES["HEIGHT"], DROPDOWN_DEFAULT_VALUES["DROPDOWN_HEIGHT"]);
         this.collapsedHeight = this.getAttr(DROPDOWN_ATTRIBUTES["COLLAPSED_HEIGHT"], DROPDOWN_DEFAULT_VALUES["DROPDOWN_HEIGHT_COLLAPSED"]);
         //this.element.style.transition = TRANSITION;
-        this.element.style.height = this.collapsedHeight;
+        this.element.style.height = this.expandedHeight;
         this.element.style.userSelect = "none";
         this.element.addEventListener("dragstart", (event) => event.preventDefault());
 
@@ -75,7 +75,8 @@ class Dropdown {
         const arrowClass = DROPDOWN_SELECTORS["DROPDOWN_ARROW"].substring(1);
         this.arrow = createElement("img", {src: arrowPath, class: arrowClass, alt: "flecha"});
         this.arrow.style.width = this.getAttr(DROPDOWN_ATTRIBUTES["ARROW_SIZE"], DROPDOWN_DEFAULT_VALUES["DROPDOWN_ARROW_SIZE"]);
-        
+        this.arrow.style.transform = "rotateZ(180deg)";
+
         this.content = createElement("div", {class: DROPDOWN_SELECTORS["DROPDOWN_CONTENT"]});
         Array.from(this.element.children).forEach(child => this.content.append(child));
 

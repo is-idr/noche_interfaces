@@ -48,7 +48,7 @@
     --gradient-vertical-inverted: linear-gradient(to top, var(--color-blue), var(--color-green));
 
     /* Ajustes del fondo */
-    --background-opacity: 30%;
+    --background-opacity: 40%;
     --background-gradient: linear-gradient(to right,
     color-mix(in oklab, var(--color-blue), white calc(100% - var(--background-opacity))),
     color-mix(in oklab, var(--color-green), white calc(100% - var(--background-opacity))));
