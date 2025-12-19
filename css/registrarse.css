@@ -6,16 +6,85 @@ main {
   background-repeat: no-repeat;
 
   display: flex;
-  justify-content: flex-end; /* coloca la card a la derecha */
-  align-items: center;       /* centra verticalmente */
-  padding: 40px;             /* espacio respecto a los márgenes */
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
 }
 
 .card-form {
-  width: 45%;        /* ocupa casi la mitad */
-  max-width: 600px;  /* límite en pantallas grandes */
+  width: 40%;
+  max-width: 600px;
+
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 16px;
+
+  display: flex;
+  justify-content: center;
 }
 
-h2 {
+.card-form form {
+  width: 100%;
+  max-width: 420px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1rem;
+}
+
+.card-form form h2 {
+  grid-column: span 2;
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-form form label {
+  grid-column: span 2;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card-form form .input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+
+  border-radius: 12px;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+#nombre,
+#apellido,
+#email,
+#phone,
+#password,
+#repetir {
+  grid-column: span 2;
+}
+
+.card-form form>div {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  main {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card-form {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .card-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .card-form form * {
+    grid-column: span 1 !important;
+  }
 }
