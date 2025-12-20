@@ -1,132 +1,115 @@
-main {
-    .background-image {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.main-section {
-    display: grid;
-    grid-template-columns: auto 800px;
-    height: calc(100vh - var(--header-height) - var(--footer-height));
-
-    .noche-container {
-        margin: auto;
-        position: relative;
-
-        .noche-info {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--color-white);
-            text-shadow: var(--shadow-default);
-            text-align: center;
-            line-height: 25px;
-
-            img.logo {
-                user-select: none;
-                min-width: 250px;
-                width: 20vw;
-                height: auto;
-                filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
-            }
-
-            h1 {
-                font-size: var(--font-size-title);
-            }
-
-            h2 {
-                font-size: var(--font-size-subtitle);
-                font-weight: normal;
-            }
-        }
-    }
-}
-
-.card-form {
-    width: 600px;
-    height: max-content;
-    margin: auto;
-
-    background: var(--color-white);
-    padding: 30px;
-    padding-bottom: 60px;
-    border-radius: 16px;
-
+.contenido-principal {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
     justify-content: center;
+    gap: 40px;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    padding: 40px 20px;
+}
 
-    .row {
-        display: flex;
-        flex-direction: column;
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: clamp(250px, 25vw, 400px);
+    height: auto;
+    user-select: none;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
+}
+
+.formulario-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+}
+
+.formulario-card h2 {
+    text-align: center;
+    font-size: var(--font-size-subtitle);
+    margin: 0 0 30px 0;
+    color: var(--color-black);
+}
+
+.formulario-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: var(--font-size-annotation);
+    font-weight: 600;
+    color: var(--color-grey);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--color-grey);
+    background-color: var(--color-white);
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+.input-field::placeholder {
+    color: #999;
+    font-family: var(--font-secondary);
+}
+
+
+@media (max-width: 768px) {
+    .contenido-principal {
+        gap: 30px;
+        padding: 30px 16px;
     }
 
-    .column {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+    .formulario-card {
+        padding: 30px 24px;
     }
 
-    .row,
-    .column {
-        margin: 20px 5px;
-    }
-
-    form {
-        h2 {
-            text-align: center;
-        }
-
-        label {
-            font-size: var(--font-size-annotation);
-        }
-
-        .input {
-            width: 100%;
-            padding: 0.7rem 1rem;
-
-            border-radius: 12px;
-            border: 1px solid var(--color-black);
-            background-color: var(--color-white);
-
-            font-size: 0.95rem;
-            box-sizing: border-box;
-
-            &::placeholder {
-                user-select: none;
-                font-family: var(--font-secondary);
-            }
-        }
-
-        button[type="submit"] {
-            margin-top: 25px;
-        }
+    .formulario-card h2 {
+        font-size: 24px;
     }
 }
 
-@media screen and (max-width: 992px) {
-    .main-section {
-        display: flex;
-        flex-direction: column;
-
-        .logo {
-            transform: translateY(100%);
-        }
-
-        .noche-info {
-            h1, h2 {
-                scale: 0%;
-            }
-        }
+@media (max-width: 480px) {
+    .contenido-principal {
+        gap: 20px;
+        padding: 20px 12px;
     }
 
-    .card-form {
-        width: 70vw;
-        min-width: 360px;
+    .formulario-card {
+        padding: 24px 20px;
+    }
+
+    .logo {
+        width: 200px;
     }
 }
