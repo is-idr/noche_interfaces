@@ -36,7 +36,7 @@
 
     /* Tamaños de elementos */
     --header-height: 50px;
-    --footer-height: 150px;
+    --footer-height: 100px;
 
     /* Otros */
     --shadow-default: 0 0 10px rgba(0, 0, 0, 0.35);

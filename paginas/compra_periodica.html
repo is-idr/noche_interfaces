@@ -16,7 +16,7 @@
     <title>Compras Periódicas - Noche</title>
 </head>
 
-<body class="gradient">
+<body>
     <header class="gradient">
         <div class="left"></div>
         <div class="center">
@@ -156,6 +156,7 @@
         </div>
     </header>
     <main>
+        <img src="../imagenes/fondo_paisaje.jpg" class="background" draggable="false" alt="Fondo"/>
         <section class="left" id="drag-and-drop">
             <div class="product-list-container">
                 <div class="product-list">
@@ -258,6 +259,10 @@
                     <button class="button button-dark">Pausar</button>
                     <button class="button button-red">Cancelar</button>
                 </div>
+                <div class="info">
+                    <span class="title">Términos y Condiciones</span><br/>
+                    <span class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
+                </div>
                 <div id="dropdown-container" arrow-path="../SVG/arrow_down.svg">
                     <div class="dropdown" arrow-size="40px" width="100%" height="110px" collapsed-height="55px">
                         <div class="dropdown-title">
@@ -276,10 +281,38 @@
                             <span>Método de pago</span>
                         </div>
                         <div class="dropdown-content">
-
+                            <img src="../SVG/credit_card.svg" class="icon" alt="Tarjeta"/>
+                            <span>MasterCard</span>
+                            <span>****</span>
+                            <span class="info-detail">1234</span>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="dropdown" arrow-size="40px" width="100%" height="110px" collapsed-height="55px">
+                        <div class="dropdown-title">
+                            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M14.5 9.08333L14.3563 8.96356C13.9968 8.66403 13.5438 8.5 13.0759 8.5H10.75C9.7835 8.5 9 9.2835 9 10.25V10.25C9 11.2165 9.7835 12 10.75 12H13.25C14.2165 12 15 12.7835 15 13.75V13.75C15 14.7165 14.2165 15.5 13.25 15.5H10.412C9.8913 15.5 9.39114 15.2969 9.01782 14.934L9 14.9167"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 8L12 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 17V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Dirección de envío</span>
+                        </div>
+                        <div class="dropdown-content">
+                            <img src="../SVG/credit_card.svg" class="icon" alt="Tarjeta"/>
+                            <span>MasterCard</span>
+                            <span>****</span>
+                            <span class="info-detail">1234</span>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </section>
     </main>

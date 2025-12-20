@@ -3,6 +3,16 @@ main {
     grid-template-columns: auto 550px;
     height: calc(100vh - var(--header-height) - var(--footer-height));
 
+    .background {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: brightness(75%);
+    }
+
     .left {
         display: grid;
         grid-template-rows: 1fr 50px 1fr;
@@ -58,10 +68,8 @@ main {
             margin: 20px;
             border-radius: 25px;
             box-shadow: var(--shadow-default);
-            height: calc(100% - 40px);
+            max-height: calc(100% - 40px);
             padding-top: 1px;
-            overflow-y: scroll;
-
             h1 {
                 font-size: var(--font-size-subtitle);
                 text-align: center;
@@ -95,6 +103,18 @@ main {
                 width: calc(100% - 50px);
             }
 
+            .info {
+                margin: 25px;
+
+                .title {
+                    font-weight: bold;
+                }
+
+                .content {
+                    font-size: var(--font-size-annotation);
+                }
+            }
+
             #dropdown-container {
                 margin: 25px;
                 width: calc(100% - 50px);
@@ -114,10 +134,30 @@ main {
                         }
 
                         span {
-                            position: absolute;
+                            position: absoAlute;
                             top: 50%;
                             left: 60px;
                             transform: translateY(-50%);
+                        }
+                    }
+
+                    .dropdown-content {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        gap: 10px;
+                        margin-top: 12px;
+
+                        .icon {
+                            width: 30px;
+                            aspect-ratio: 1;
+                        }
+
+                        .info-detail {
+                            background-color: var(--color-grey);
+                            color: var(--color-white);
+                            padding: 3px 10px;
+                            border-radius: 5px;
                         }
                     }
                 }
@@ -149,6 +189,7 @@ main {
             justify-content: left;
             align-items: center;
             gap: 10px;
+            height: 200%;
 
             .name {
                 margin-left: 10px;
