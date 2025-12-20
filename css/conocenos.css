@@ -1,5 +1,4 @@
 * {
-    /*border: red 1px solid;*/
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -29,32 +28,47 @@ main {
     height: auto;
 }
 
-/*main h1 {
-    text-align: center;
+main h1 {
     color: white;
     text-shadow: 2px 2px 4px black;
-    margin-bottom: 3rem;
-}*/
+    margin-bottom: 0;
+}
 
 .information {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
+}
+
+.noche-info {
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    width: 100%; 
+    margin-bottom: 3rem;
+    padding: 0 1rem; 
+}
+
+.noche-info p {
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    line-height: 1.8; 
+    text-align: justify; 
 }
 
 .image-left, .image-right {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .image-left {
     flex-direction: row;
 }
 
-.image-left .dev-personal-info {
+.image-left .section-info {
     text-align: left;
     color: white;
     text-shadow: 2px 2px 4px black;
@@ -64,13 +78,13 @@ main {
     flex-direction: row-reverse;
 }
 
-.image-right .dev-personal-info {
+.image-right .section-info {
     text-align: right;
     color: white;
     text-shadow: 2px 2px 4px black;
 }
 
 .knowus-image img {
-    width: 200px;
+    width: 300px;
     height: auto;
 }
