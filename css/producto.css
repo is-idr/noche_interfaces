@@ -1,7 +1,22 @@
+.background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(75%);
+}
+
+main {
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+    display: flex;
+}
+
 .producto-card {
     max-width: 1400px;
-    margin: 40px auto;
-    padding: 40px;
+    height: max-content;
+    margin: auto;
 }
 
 .producto-container {
@@ -43,14 +58,15 @@
     font-size: var(--font-size-title);
     font-weight: bold;
     color: var(--color-black);
-    margin: 0;
-    line-height: 1.2;
+    margin: 0px;
+    margin-top: 10px;
 }
 
 .producto-compra {
     display: flex;
     align-items: center;
     gap: 20px;
+    width: calc(100% - 20px);
 }
 
 .producto-precio {
@@ -82,6 +98,7 @@
 
 .producto-caracteristicas {
     padding: 24px;
+    width: calc(100% - 72px);
 }
 
 .caracteristicas-titulo {
@@ -92,24 +109,11 @@
     margin: 0 0 16px 0;
 }
 
-.caracteristicas-grid {
+.caracteristicas-grid ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px 24px;
-}
-
-.caracteristica-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: var(--font-secondary);
-    font-size: 16px;
-    color: var(--color-grey);
-}
-
-.caracteristica-item .bullet {
-    color: var(--color-grey);
-    font-size: 12px;
+    font-size: var(--font-size-annotation);
 }
 
 .producto-detalles {

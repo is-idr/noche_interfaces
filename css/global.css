@@ -171,6 +171,7 @@ footer {
 }
 
 .button-light {
+    color: var(--color-black);
     background: var(--color-white);
 
     &:hover {

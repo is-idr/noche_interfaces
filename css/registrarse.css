@@ -24,7 +24,7 @@ main {
             color: var(--color-white);
             text-shadow: var(--shadow-default);
             text-align: center;
-            line-height: 25px;
+            line-height: 40px;
 
             img.logo {
                 user-select: none;
@@ -115,13 +115,11 @@ main {
         flex-direction: column;
 
         .logo {
-            transform: translateY(100%);
+            scale: 0%;
         }
 
         .noche-info {
-            h1, h2 {
-                scale: 0%;
-            }
+            scale: 0%;
         }
     }
 

@@ -130,6 +130,12 @@ main {
     }
 }
 
+footer {
+    .center .button-group {
+        margin-top: 25px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     section.ads-container .ad-container {
         &:nth-last-child(2) {
