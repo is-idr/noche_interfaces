@@ -12,6 +12,7 @@
 /* Flex general con altura - header y footer. */
 main {
     height: calc(100vh - var(--header-height) - var(--footer-height));
+    min-height: max-content;
     display: flex;
 }
 

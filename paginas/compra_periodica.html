@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="gradient">
+    <header class="gradient"> <!-- Comentado en index.html -->
         <div class="left"></div>
         <div class="center">
             <a href="../index.html">
@@ -155,12 +155,14 @@
             </div>
         </div>
     </header>
-    <main>
+    <main> <!-- Sección principal dividida en dos: izquierda y derecha -->
+        <!-- Imagen de fondo -->
         <img src="../imagenes/fondo_paisaje.jpg" class="background" draggable="false" alt="Fondo" />
+        <!-- Parte izquierda de la página -->
         <section class="left" id="drag-and-drop">
             <div class="product-list-container">
-                <div class="product-list">
-                    <div class="top">
+                <div class="product-list"> <!-- Listado de productos -->
+                    <div class="top"> <!-- Parte superior (título y buscador) -->
                         <span>Carrito</span>
                         <div class="custom-searchbar-container">
                             <input type="text" class="custom-searchbar" placeholder="Buscar..." />
@@ -172,7 +174,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="products drag-container">
+                    <div class="products drag-container"> <!-- Parte inferior (productos) -->
                         <div class="product drag-element">
                             <img src="../SVG/search.svg" class="details" width="30" height="30" draggable="false"
                                 alt="Buscar">
@@ -245,6 +247,7 @@
                 </div>
             </div>
         </section>
+        <!-- Parte derecha de la página -->
         <section class="right">
             <div class="purchase-container">
                 <h1>Finalizar compra</h1>
