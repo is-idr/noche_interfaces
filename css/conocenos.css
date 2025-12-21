@@ -88,3 +88,9 @@ main h1 {
     width: 300px;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    .image-left, .image-right {
+        flex-direction: column;
+    }
+}
