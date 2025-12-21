@@ -1,22 +1,25 @@
 window.addEventListener("DOMContentLoaded", () => {
+    // Primero obtenemos los elementos del header
     const hamburger = document.getElementById("hamburger");
     const icon = hamburger.querySelector(".icon");
     const content = hamburger.querySelector(".content");
     const close = content.querySelector("#close-hamburger-button");
     const background = hamburger.querySelector("#content-background");
+    // Ocultamos el fondo y establecemos que no esté abierto por defecto
     background.hidden = true;
     let contentOpened = false;
 
+    // Al darle click al icono, abrir/cerrar el menú (con animación)
     icon.addEventListener("click", () => {
         contentOpened = !contentOpened;
         animateContent(content, background, contentOpened);
     });
-
+    // Al darle a la X, cerrar el menú (con animación)
     close.addEventListener("click", () => {
         contentOpened = false;
         animateContent(content, background, contentOpened);
     });
-
+    // Al darle click al fondo, cerrar el menú (con animación)
     background.addEventListener("click", () => {
         contentOpened = false;
         animateContent(content, background, contentOpened);
