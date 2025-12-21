@@ -1,4 +1,4 @@
-
+/* Imagen de fondo fija */
 .background-image {
     position: fixed;
     top: 0;
@@ -9,6 +9,7 @@
     z-index: -1;
 }
 
+/* Main con flex, centrado, altura calculada y márgenes */
 .contenido-principal {
     display: flex;
     flex-direction: column;
@@ -19,10 +20,12 @@
     padding: 40px 20px;
 }
 
+/* Logo centrado (contenedor) */
 .logo-container {
     text-align: center;
 }
 
+/* Logo */
 .logo {
     width: clamp(250px, 25vw, 400px);
     height: auto;
@@ -30,12 +33,15 @@
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
 }
 
+/* Card del formulario, con márgenes y anchura máxima */
 .formulario-card {
     width: 100%;
     max-width: 600px;
     padding: 40px;
 }
 
+/* Título del formulario
+con variables globales. */
 .formulario-card h2 {
     text-align: center;
     font-size: var(--font-size-subtitle);
@@ -43,46 +49,59 @@
     color: var(--color-black);
 }
 
+/* Formulario específico.
+Flex con columnas. */
 .formulario-card form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+/* Inputs (div contenedor) */
 .campo {
     display: flex;
     flex-direction: column;
+    /* Pequeño margen */
     gap: 8px;
 }
 
+/* Labels de los inputs con variables globales. */
 .campo label {
     font-size: var(--font-size-annotation);
     font-weight: 600;
     color: var(--color-grey);
 }
 
+/* Los inputs propiamente */
 .input-field {
+    /* Anchura */
     width: 100%;
+    /* Márgenes */
     padding: 12px 16px;
     border-radius: 12px;
+    /* Variables globales */
     border: 1px solid var(--color-grey);
     background-color: var(--color-white);
     font-family: var(--font-secondary);
     font-size: 16px;
     box-sizing: border-box;
+    /* Trnasición del borde */
     transition: border-color 0.3s ease;
 }
 
+/* Contorno azul al seleccionar input */
 .input-field:focus {
     outline: none;
     border-color: var(--color-blue);
 }
 
+/* Placeholders grises para los inputs */
 .input-field::placeholder {
     color: #999;
     font-family: var(--font-secondary);
 }
 
+/* RESPONSIVIDAD */
 
 @media (max-width: 768px) {
     .contenido-principal {

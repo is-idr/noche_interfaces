@@ -1,4 +1,4 @@
-/* Posición fija de la imagen de fondo. */
+/* Posición fija de la imagen de fondo. Queda fija aunque hagamos scroll*/
 main {
     .background-image {
         position: fixed;
@@ -8,16 +8,22 @@ main {
     }
 }
 
+/* La sección principal utiliza grid.
+Con auto para que el contenido sea flexible
+y con el tamaño de la pantalla menos header y footer. */
 .main-section {
     display: grid;
     grid-template-columns: auto 800px;
     height: calc(100vh - var(--header-height) - var(--footer-height));
 
-    /* Contenedor principal */
+    /* Contenedor del logo y el texto corporativo */
     .noche-container {
+        /* Centrado */
         margin: auto;
         position: relative;
 
+        /* Texto del logo, centrado dentro de noche-container */
+        /* Texto blanco con sombra y centrado. */
         .noche-info {
             position: absolute;
             top: 50%;
@@ -28,6 +34,7 @@ main {
             text-align: center;
             line-height: 40px;
 
+            /* Logo */
             img.logo {
                 user-select: none;
                 min-width: 250px;
@@ -51,15 +58,18 @@ main {
 
 /* Formulario, tamaños, color, flex y  */
 .card-form {
+    /* Ancho fijo pantalla ordenador. */
     width: 600px;
     height: max-content;
     margin: auto;
 
+    /* Fondo blanco, padding respecto a bordes. CARD */
     background: var(--color-white);
     padding: 30px;
     padding-bottom: 60px;
     border-radius: 16px;
 
+    /* Organizado en columnas */
     display: flex;
     flex-direction: column;
 
@@ -81,6 +91,7 @@ main {
         margin: 20px 5px;
     }
 
+    /* El formulario en sí. */
     form {
         h2 {
             text-align: center;
@@ -90,6 +101,7 @@ main {
             font-size: var(--font-size-annotation);
         }
 
+        /* Inputs de texto */
         .input {
             width: 100%;
             padding: 0.7rem 1rem;
@@ -101,18 +113,21 @@ main {
             font-size: 0.95rem;
             box-sizing: border-box;
 
+            /* Placeholders con fuente secundaria */
             &::placeholder {
                 user-select: none;
                 font-family: var(--font-secondary);
             }
         }
 
+        /* Separación del botón */
         button[type="submit"] {
             margin-top: 25px;
         }
     }
 }
 
+/* Responsividad */
 @media screen and (max-width: 992px) {
     .main-section {
         display: flex;

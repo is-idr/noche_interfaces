@@ -1,3 +1,4 @@
+/* Imagen de fondo con brillo reducido. */
 .background {
     position: fixed;
     left: 0;
@@ -8,51 +9,64 @@
     filter: brightness(75%);
 }
 
+/* Flex general con altura - header y footer. */
 main {
     height: calc(100vh - var(--header-height) - var(--footer-height));
     display: flex;
 }
 
+/* Anchura máxima para pantallas grandes. Altura
+según contenido, márgenes automáticos. */
 .producto-card {
     max-width: 1400px;
     height: max-content;
     margin: auto;
 }
 
+/* Organización con grid */
 .producto-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* Separación entre columnas */
     gap: 40px;
 }
 
+/* Flex para la imagen */
 .producto-imagen {
     display: flex;
     align-items: flex-start;
 }
 
+/* CSS para los placeholders de productos no existentes. */
 .imagen-placeholder {
     width: 100%;
     aspect-ratio: 1;
     display: flex;
+    /* Centrados y justificados. */
     align-items: center;
     justify-content: center;
     background-color: var(--color-lavender);
     border-radius: 10px;
+    /* Recortar la imagen si sobresale. */
     overflow: hidden;
 }
 
+/* Específico para la imagen de los placeholders */
 .imagen-placeholder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Flex para bloques de texto, uno debjo de otro. */
 .producto-info {
     display: flex;
     flex-direction: column;
+    /* Margen */
     gap: 24px;
 }
 
+/* Titulo de producto con variables. */
 .producto-titulo {
     font-family: var(--font-main);
     font-size: var(--font-size-title);
@@ -69,12 +83,14 @@ main {
     width: calc(100% - 20px);
 }
 
+/* Precio */
 .producto-precio {
     background-color: var(--color-lavender);
     padding: 16px 32px;
     border-radius: 50px;
 }
 
+/* Fuente del precio */
 .precio-valor {
     font-family: var(--font-main);
     font-size: 28px;
@@ -82,12 +98,14 @@ main {
     color: var(--color-black);
 }
 
+/* Descripciones de producto */
 .producto-descripcion {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
+/* Específico para elementos p. */
 .producto-descripcion p {
     font-family: var(--font-secondary);
     font-size: 18px;
@@ -95,6 +113,8 @@ main {
     color: var(--color-grey);
     margin: 0;
 }
+
+/* CONTENEDORE CON CARACTERÍSTICAS */
 
 .producto-caracteristicas {
     padding: 24px;
@@ -130,6 +150,7 @@ main {
     margin: 0;
 }
 
+/* Responsividad */
 @media (max-width: 992px) {
     .producto-card {
         margin: 24px;
