@@ -1,3 +1,4 @@
+/* Posición fija de la imagen de fondo. */
 main {
     .background-image {
         position: fixed;
@@ -12,6 +13,7 @@ main {
     grid-template-columns: auto 800px;
     height: calc(100vh - var(--header-height) - var(--footer-height));
 
+    /* Contenedor principal */
     .noche-container {
         margin: auto;
         position: relative;
@@ -34,6 +36,7 @@ main {
                 filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
             }
 
+            /* Estilos de encabezados */
             h1 {
                 font-size: var(--font-size-title);
             }
@@ -46,6 +49,7 @@ main {
     }
 }
 
+/* Formulario, tamaños, color, flex y  */
 .card-form {
     width: 600px;
     height: max-content;
@@ -126,72 +130,5 @@ main {
     .card-form {
         width: 70vw;
         min-width: 360px;
-    }
-}
-
-/*
-.card-form form {
-    width: 100%;
-    max-width: 420px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem 1rem;
-}
-
-.card-form form h2 {
-    grid-column: span 2;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.card-form form label {
-    grid-column: span 2;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.card-form form .input {
-    width: 100%;
-    padding: 0.7rem 1rem;
-
-    border-radius: 12px;
-    border: 1px solid var(--color-black);
-    background-color: var(--color-white);
-
-    font-size: 0.95rem;
-    box-sizing: border-box;
-}
-
-#nombre,
-#apellido,
-#email,
-#phone,
-#password,
-#repetir {
-    grid-column: span 2;
-}
-
-.card-form form > div {
-    grid-column: span 2;
-}
-
-@media (max-width: 768px) {
-    main {
-        justify-content: center;
-        padding: 20px;
-    }
-
-    .card-form {
-        width: 100%;
-        max-width: 480px;
-    }
-
-    .card-form form {
-        grid-template-columns: 1fr;
-    }
-
-    .card-form form * {
-        grid-column: span 1 !important;
     }
 }
