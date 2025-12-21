@@ -2,6 +2,7 @@ main {
     display: grid;
     grid-template-columns: 500px auto;
     height: calc(100vh - var(--header-height) - var(--footer-height));
+    min-height: max-content;
 
     .background {
         position: fixed;
