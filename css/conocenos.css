@@ -1,18 +1,22 @@
+/*Esto se aplica a todos los elementos de la página*/
 * {
     box-sizing: border-box;
+    /*Elimina los márgenes y los padding por defecto del navegador*/
     margin: 0;
     padding: 0;
 }
 
+/*Contenedor principal que muestra el contenido de la página*/
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6rem;
+    flex-direction: column; /*Ayuda a poner los elementos-hijos uno debajo de otro*/
+    align-items: center; /*Da centrado horizontal a los elementos*/
+    gap: 6rem; /*Indica el espacio de separación entre los hijos*/
     padding-top: 5rem;
     padding-bottom: 5rem;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh; /*Hace que el elemento ocupe al menos el 100% de la altura de la pantalla*/
+    /*Este bloque configura la imagen del color, mezclandola con el color negro semitransparente para oscurecerla*/
+    background-color: rgba(0, 0, 0, 0.5); 
     background-image: url("../imagenes/fondo_paisaje.jpg");
     background-size: cover;
     background-position: center;
@@ -21,27 +25,31 @@ main {
     background-blend-mode: darken;
 }
 
+/*Imagen del logo*/
 .logo img {
-    width: 15vw;
-    max-width: 200px;
+    width: 15vw; /*Ancho relativo al 15% del ancho de la ventana*/
+    max-width: 200px; 
     min-width: 120px;
     height: auto;
 }
 
+/*Título principal debajo del logo*/
 main h1 {
     color: white;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px black; /*Da sombra negra al texto para mejorar el contraste*/
     margin-bottom: 0;
 }
 
+/*Contenedor de información sobre el supermercado*/
 .information {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    width: 70%;
-    margin: 0 auto;
+    width: 70%; /*Ocupa 70% del ancho del contenedor*/
+    margin: 0 auto; /*Centra el bloque de información horizontalmente*/
 }
 
+/*Contenedor con el párrafo que cuenta sobre el supermercado*/
 .noche-info {
     color: white;
     text-shadow: 2px 2px 4px black;
@@ -50,6 +58,7 @@ main h1 {
     padding: 0 1rem; 
 }
 
+/*El párrafo mencionado anteriormente*/
 .noche-info p {
     color: white;
     text-shadow: 2px 2px 4px black;
@@ -57,6 +66,7 @@ main h1 {
     text-align: justify; 
 }
 
+/*Secciones con la información sobre los desarrolladores (uno con imagen a la izquierda y otro con imagen a la derecha*/
 .image-left, .image-right {
     display: flex;
     align-items: center;
@@ -64,33 +74,39 @@ main h1 {
     margin-bottom: 2rem;
 }
 
+/*Pone la imagen a la izquierda y el texto con información a la derecha*/
 .image-left {
     flex-direction: row;
 }
 
+/*Párrafo de texto con la información sobre los desarrolladores*/
 .image-left .section-info {
-    text-align: left;
+    text-align: left; 
     color: white;
     text-shadow: 2px 2px 4px black;
 }
 
+/*Pone la imagen a la derecha y el texto con información a la izquierda*/
 .image-right {
     flex-direction: row-reverse;
 }
 
+/*Párrafo de texto con la información sobre los desarrolladores*/
 .image-right .section-info {
     text-align: right;
     color: white;
     text-shadow: 2px 2px 4px black;
 }
 
+/*Imagen que representa a cada uno de los desarrolladores (por ahora es un placeholder*/
 .knowus-image img {
     width: 300px;
     height: auto;
 }
 
+/*Bloque de la responsividad*/
 @media (max-width: 768px) {
-    .image-left, .image-right {
+    .image-left, .image-right { /*En pantallas pequeñas pone la imagen encima del texto*/
         flex-direction: column;
     }
 }
